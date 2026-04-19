@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" style="padding-top: 150px; padding-bottom: 50px;">
+    <div class="container">
+        <h1>
+            <span>Our Expert</span> Services
+        </h1>
+        <p>Comprehensive solutions for all your tech needs at your doorstep.</p>
+    </div>
+</section>
+
+<section id="services" class="container" style="margin-top: 2rem; margin-bottom: 5rem;">
+    <div class="grid">
+        <div class="card">
+            <div class="card-icon">💻</div>
+            <h3>MacBook Service</h3>
+            <p>Specialized repair and maintenance for all Apple MacBook models with genuine parts. Includes screen replacement, battery upgrades, and motherboard repairs.</p>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem; opacity: 0.8; font-size: 0.9rem;">
+                <li>Logic Board Repair</li>
+                <li>Screen Replacement</li>
+                <li>Battery Diagnostics</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-icon">🪟</div>
+            <h3>Windows Service</h3>
+            <p>Complete OS installation, troubleshooting, and hardware upgrades for Windows PCs. Fast fixes for slow computers, blue screens, and virus removal.</p>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem; opacity: 0.8; font-size: 0.9rem;">
+                <li>OS Installation & Updates</li>
+                <li>Virus & Malware Removal</li>
+                <li>Hardware Upgrades</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>Gadget Installation</h3>
+            <p>Smart home setup, printer configuration, and device networking at your doorstep. We get your smart devices talking to each other seamlessly.</p>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem; opacity: 0.8; font-size: 0.9rem;">
+                <li>Printer Setup</li>
+                <li>Smart Home Devices</li>
+                <li>WiFi Networking</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-icon">💾</div>
+            <h3>Data Recovery</h3>
+            <p>Lost your important files? Our advanced data recovery solutions can retrieve lost documents, photos, and databases from failed hard drives or SSDs.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔧</div>
+            <h3>Hardware Upgrades</h3>
+            <p>Breathe new life into your old computer with SSD upgrades, RAM expansion, and custom cooling solutions.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Cyber Security</h3>
+            <p>Comprehensive security audits for your home network or small business. Protect your data from modern threats.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner" style="margin-top: 3rem; text-align: center; padding: 4rem 0; background: var(--bg-card); border-top: 1px solid var(--glass-border);">
+    <div class="container">
+        <h2>Don't see what you need?</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.8;">Contact us, and our experts will provide a customized solution for your specific issue.</p>
+        <a href="{% url 'app' %}" class="btn-primary">Book an Expert Now</a>
+    </div>
+</section>
+{% endblock %}

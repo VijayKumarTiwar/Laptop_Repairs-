@@ -2,15 +2,15 @@
 {% load static %}
 
 {% block content %}
-<section class="hero">
+<section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('{% static "images/hero_bg.png" %}') center/cover no-repeat; padding-top: 160px; padding-bottom: 120px;">
     <div class="container">
-        <h1>
-            <span>India's Fastest</span>
+        <h1 style="color: #fff;">
+            <span style="background: linear-gradient(90deg, #fff, var(--primary), #fff); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">India's Fastest</span>
             30-Minute Doorstep Help
         </h1>
-        <p>Premium IT Support for your Home & Office. Instant repair for Laptops, PCs, and Gadgets by certified experts.
+        <p style="color: rgba(255, 255, 255, 0.9); font-weight: 400; font-size: 1.2rem;">Premium IT Support for your Home & Office. Instant repair for Laptops, PCs, and Gadgets by certified experts.
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions" style="margin-top: 2rem;">
             <a href="#" class="btn-primary">Get Help in 30 Mins</a>
         </div>
     </div>
@@ -63,6 +63,9 @@
             <p>We use certified, eco-friendly tools and methods ensuring safety for your devices and family.</p>
         </div>
     </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="{% url 'about' %}" class="btn-primary">Learn About Us</a>
+    </div>
 </section>
 
 <section id="impact" class="impact-section"
@@ -94,35 +97,33 @@
     </div>
 </section>
 
-<section id="testimonials" class="container" style="margin-top: 3rem;">
-    <div class="section-title">
-        <h2>What Our Customers Say</h2>
-        <p>Real experiences from real people</p>
+<section id="testimonials" style="margin-top: 3rem; overflow: hidden; padding: 2rem 0; width: 100%;">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Our Customers Say</h2>
+            <p>Real experiences from real people</p>
+        </div>
     </div>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-        <div class="card testimonial-card">
-            <p class="quote">"Absolutely love Tiwari! The engineer arrived within 8 minutes and did an amazing job. My
-                laptop is rebooting fast!"</p>
-            <div class="user-info">
-                <strong>Priya Sharma</strong>
-                <span>Delhi</span>
-            </div>
+    <div class="marquee-wrapper">
+        <div class="marquee-track marquee-left">
+            <div class="card testimonial-card"><p class="quote">"Absolutely love Tiwari! The engineer arrived within 8 minutes and did an amazing job. My laptop is rebooting fast!"</p><div class="user-info"><strong>Priya Sharma</strong><span>Delhi</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"Professional, punctual, and thorough. The verification process gives me peace of mind. Highly recommended!"</p><div class="user-info"><strong>Rajesh Kumar</strong><span>Mumbai</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"Game changer for working professionals. Book at late night if system crashing, no worries for morning meeting!"</p><div class="user-info"><strong>Anita Desai</strong><span>Bangalore</span></div></div>
+            <!-- Duplicated for infinite scroll -->
+            <div class="card testimonial-card"><p class="quote">"Absolutely love Tiwari! The engineer arrived within 8 minutes and did an amazing job. My laptop is rebooting fast!"</p><div class="user-info"><strong>Priya Sharma</strong><span>Delhi</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"Professional, punctual, and thorough. The verification process gives me peace of mind. Highly recommended!"</p><div class="user-info"><strong>Rajesh Kumar</strong><span>Mumbai</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"Game changer for working professionals. Book at late night if system crashing, no worries for morning meeting!"</p><div class="user-info"><strong>Anita Desai</strong><span>Bangalore</span></div></div>
         </div>
-        <div class="card testimonial-card">
-            <p class="quote">"Professional, punctual, and thorough. The verification process gives me peace of mind.
-                Highly recommended!"</p>
-            <div class="user-info">
-                <strong>Rajesh Kumar</strong>
-                <span>Mumbai</span>
-            </div>
-        </div>
-        <div class="card testimonial-card">
-            <p class="quote">"Game changer for working professionals. Book at late night if system crashing, no worries
-                for morning meeting Engineers will be there at instant!"</p>
-            <div class="user-info">
-                <strong>Anita Desai</strong>
-                <span>Bangalore</span>
-            </div>
+    </div>
+    <div class="marquee-wrapper" style="margin-top: 2rem;">
+        <div class="marquee-track marquee-right">
+            <div class="card testimonial-card"><p class="quote">"Exceptional service. Highly recommend the experts for hardware upgrades."</p><div class="user-info"><strong>Suresh Iyer</strong><span>Chennai</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"The 30-minute guarantee is real! Saved my presentation when my screen died."</p><div class="user-info"><strong>Neha Gupta</strong><span>Pune</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"Transparent pricing, no hidden fees. Purely Bhartiya and purely awesome."</p><div class="user-info"><strong>Amit Patel</strong><span>Ahmedabad</span></div></div>
+            <!-- Duplicated for infinite scroll -->
+            <div class="card testimonial-card"><p class="quote">"Exceptional service. Highly recommend the experts for hardware upgrades."</p><div class="user-info"><strong>Suresh Iyer</strong><span>Chennai</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"The 30-minute guarantee is real! Saved my presentation when my screen died."</p><div class="user-info"><strong>Neha Gupta</strong><span>Pune</span></div></div>
+            <div class="card testimonial-card"><p class="quote">"Transparent pricing, no hidden fees. Purely Bhartiya and purely awesome."</p><div class="user-info"><strong>Amit Patel</strong><span>Ahmedabad</span></div></div>
         </div>
     </div>
 </section>
@@ -149,43 +150,70 @@
             <p>Smart home setup, printer configuration, and device networking at your doorstep.</p>
         </div>
     </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="{% url 'services' %}" class="btn-primary">View All Services</a>
+    </div>
 </section>
 
 <section id="how-it-works" class="container" style="margin-top: 3rem;">
     <div class="section-title">
         <h2>How It Works</h2>
-        <p>Get Professional Doorstep Engineer in just 20 simple steps</p>
+        <p>Get Professional Doorstep Engineer in just a few simple steps</p>
     </div>
-    <div class="steps-grid">
-        <div class="step-card">
-            <div class="step-num">1</div>
-            <h3>Download the App</h3>
-            <p>Get the Tiwari app from Google Play Store or Apple App Store. Sign up in less than a minute.</p>
+    <div class="faq-accordion">
+        <div class="faq-item">
+            <div class="faq-header">
+                <h3 style="display: flex; align-items: center; gap: 10px;"><span class="step-num" style="position: static; width: 24px; height: 24px; font-size: 0.8rem; flex-shrink: 0;">1</span> Download the App</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+                <p>Get the Tiwari app from Google Play Store or Apple App Store. Sign up in less than a minute.</p>
+            </div>
         </div>
-        <div class="step-card">
-            <div class="step-num">2</div>
-            <h3>Set Your Location</h3>
-            <p>Enter your address and let us know where you need Quick Support services.</p>
+        <div class="faq-item">
+            <div class="faq-header">
+                <h3 style="display: flex; align-items: center; gap: 10px;"><span class="step-num" style="position: static; width: 24px; height: 24px; font-size: 0.8rem; flex-shrink: 0;">2</span> Set Your Location</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+                <p>Enter your address and let us know where you need Quick Support services.</p>
+            </div>
         </div>
-        <div class="step-card">
-            <div class="step-num">3</div>
-            <h3>Choose Your Service</h3>
-            <p>Select from our range of Quick Support services. Pick a time that works best for you.</p>
+        <div class="faq-item">
+            <div class="faq-header">
+                <h3 style="display: flex; align-items: center; gap: 10px;"><span class="step-num" style="position: static; width: 24px; height: 24px; font-size: 0.8rem; flex-shrink: 0;">3</span> Choose Your Service</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+                <p>Select from our range of Quick Support services. Pick a time that works best for you.</p>
+            </div>
         </div>
-        <div class="step-card">
-            <div class="step-num">4</div>
-            <h3>Professional Assigned</h3>
-            <p>A verified professional Engineer near you is automatically assigned. Track them in real-time.</p>
+        <div class="faq-item">
+            <div class="faq-header">
+                <h3 style="display: flex; align-items: center; gap: 10px;"><span class="step-num" style="position: static; width: 24px; height: 24px; font-size: 0.8rem; flex-shrink: 0;">4</span> Professional Assigned</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+                <p>A verified professional Engineer near you is automatically assigned. Track them in real-time.</p>
+            </div>
         </div>
-        <div class="step-card">
-            <div class="step-num">5</div>
-            <h3>Service Completed</h3>
-            <p>Our professional arrives within 30 minutes and completes the job to perfection.</p>
+        <div class="faq-item">
+            <div class="faq-header">
+                <h3 style="display: flex; align-items: center; gap: 10px;"><span class="step-num" style="position: static; width: 24px; height: 24px; font-size: 0.8rem; flex-shrink: 0;">5</span> Service Completed</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+                <p>Our professional arrives within 30 minutes and completes the job to perfection.</p>
+            </div>
         </div>
-        <div class="step-card">
-            <div class="step-num">6</div>
-            <h3>Rate & Review</h3>
-            <p>Share your experience and help us maintain our high standards.</p>
+        <div class="faq-item">
+            <div class="faq-header">
+                <h3 style="display: flex; align-items: center; gap: 10px;"><span class="step-num" style="position: static; width: 24px; height: 24px; font-size: 0.8rem; flex-shrink: 0;">6</span> Rate & Review</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+                <p>Share your experience and help us maintain our high standards.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -222,6 +250,9 @@
     <div id="city-tags-container" class="city-tags"
         style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
         <span class="tag">Loading cities...</span>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="{% url 'cities' %}" class="btn-primary">View Coverage Area</a>
     </div>
 </section>
 
@@ -312,7 +343,7 @@
         <h2 style="font-size: 3rem; margin-bottom: 1.5rem; color: #fff;">Ready to Experience Tiwari?</h2>
         <p style="font-size: 1.25rem; margin-bottom: 2.5rem; color: #fff; opacity: 0.9;">Download the app now and get
             your first booking done in under a minute.</p>
-        <a href="#download" class="btn-primary" style="background: #fff; color: var(--primary) !important;">Download for
+        <a href="{% url 'app' %}" class="btn-primary" style="background: #fff; color: var(--primary) !important;">Download for
             Android</a>
     </div>
 </section>
@@ -437,79 +468,6 @@
         line-height: 1.4;
     }
 
-    .step-num {
-        position: absolute;
-        top: -12px;
-        left: 15px;
-        background: var(--primary);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 1rem;
-        color: #fff;
-    }
-
-    .faq-accordion {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .faq-item {
-        background: var(--bg-card);
-        margin-bottom: 1rem;
-        border-radius: 20px;
-        border: 1px solid var(--glass-border);
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .faq-header {
-        padding: 1.5rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-    .faq-header:hover {
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .faq-header h3 {
-        margin-bottom: 0;
-        font-size: 1.1rem;
-        color: var(--text-light);
-    }
-
-    .faq-icon {
-        font-size: 1.5rem;
-        color: var(--primary);
-        transition: transform 0.3s;
-    }
-
-    .faq-content {
-        max-height: 0;
-        overflow: hidden;
-        padding: 0 2rem;
-        transition: all 0.3s ease;
-        opacity: 0;
-    }
-
-    .faq-item.active .faq-content {
-        max-height: 200px;
-        padding: 1rem 2rem 2rem;
-        opacity: 1;
-    }
-
-    .faq-item.active .faq-icon {
-        transform: rotate(45deg);
-    }
-
     .blog-card {
         display: flex;
         flex-direction: column;
@@ -566,6 +524,66 @@
         font-size: 0.8rem;
         opacity: 0.6;
     }
+
+    /* Marquee CSS */
+    .marquee-wrapper {
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .marquee-wrapper::before {
+        left: 0;
+        background: linear-gradient(to right, var(--bg-dark), transparent);
+    }
+    .marquee-wrapper::after {
+        right: 0;
+        background: linear-gradient(to left, var(--bg-dark), transparent);
+    }
+
+    .marquee-track {
+        display: flex;
+        width: max-content;
+        gap: 2rem;
+    }
+
+    .marquee-track .card {
+        width: 350px;
+        flex-shrink: 0;
+    }
+
+    .marquee-left {
+        animation: scroll-left 30s linear infinite;
+    }
+
+    .marquee-right {
+        animation: scroll-right 30s linear infinite;
+    }
+
+    .marquee-track:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50% - 1rem)); }
+    }
+
+    @keyframes scroll-right {
+        0% { transform: translateX(calc(-50% - 1rem)); }
+        100% { transform: translateX(0); }
+    }
 </style>
 {% block extra_js %}
 <script>
@@ -609,29 +627,12 @@
                             <h3>${blog.title}</h3>
                             <p style="font-size: 0.95rem; opacity: 0.8;">${blog.excerpt}</p>
                         </div>
-                        <a href="#" class="btn-read-more">Read More →</a>
+                        <a href="/blogs/${blog.slug}/" class="btn-read-more">Read More →</a>
                     `;
                     blogContainer.appendChild(card);
                 });
             })
             .catch(error => console.error('Error fetching blogs:', error));
-
-        // FAQ Accordion Logic
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const header = item.querySelector('.faq-header');
-            header.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-
-                // Close all others
-                faqItems.forEach(i => i.classList.remove('active'));
-
-                // Toggle current
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
     });
 </script>
 {% endblock %}

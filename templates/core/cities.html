@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" style="padding-top: 150px; padding-bottom: 50px;">
+    <div class="container">
+        <h1>
+            <span>Available in</span> 48+ Cities
+        </h1>
+        <p>Providing rapid doorstep service across the length and breadth of India.</p>
+    </div>
+</section>
+
+<section class="container" style="margin-top: 2rem; margin-bottom: 5rem;">
+    <div class="section-title">
+        <h2>Nationwide Coverage</h2>
+        <p>We are constantly expanding to bring our services to your doorstep.</p>
+    </div>
+    
+    <div id="city-tags-container" class="city-tags" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 3rem;">
+        <span class="tag">Loading cities...</span>
+    </div>
+
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="card" style="text-align: center;">
+            <h3 style="color: var(--primary);">North India</h3>
+            <p>Delhi NCR, Chandigarh, Jaipur, Lucknow, Ludhiana, Dehradun, and more.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <h3 style="color: var(--primary);">South India</h3>
+            <p>Bangalore, Chennai, Hyderabad, Kochi, Coimbatore, Trivandrum, and more.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <h3 style="color: var(--primary);">West India</h3>
+            <p>Mumbai, Pune, Ahmedabad, Surat, Nagpur, Indore, and more.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <h3 style="color: var(--primary);">East India</h3>
+            <p>Kolkata, Patna, Bhubaneswar, Guwahati, Ranchi, and more.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner" style="margin-top: 3rem; text-align: center; padding: 4rem 0; background: var(--bg-card); border-top: 1px solid var(--glass-border);">
+    <div class="container">
+        <h2>Is your city not listed?</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.8;">We are rapidly expanding! Download our app and register your area, we will notify you when we arrive.</p>
+        <a href="{% url 'app' %}" class="btn-primary">Get the App</a>
+    </div>
+</section>
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const container = document.getElementById('city-tags-container');
+
+        fetch('/api/cities/')
+            .then(response => response.json())
+            .then(data => {
+                container.innerHTML = '';
+                if(data.length > 0) {
+                    data.forEach(city => {
+                        const span = document.createElement('span');
+                        span.className = 'tag';
+                        span.textContent = city.name;
+                        container.appendChild(span);
+                    });
+                } else {
+                    container.innerHTML = `
+                        <span class="tag">Delhi</span>
+                        <span class="tag">Mumbai</span>
+                        <span class="tag">Bangalore</span>
+                        <span class="tag">Chennai</span>
+                        <span class="tag">Hyderabad</span>
+                        <span class="tag">Pune</span>
+                        <span class="tag">Kolkata</span>
+                        <span class="tag">Ahmedabad</span>
+                        <span class="tag">Jaipur</span>
+                        <span class="tag">Chandigarh</span>
+                    `;
+                }
+                const moreSpan = document.createElement('span');
+                moreSpan.className = 'tag';
+                moreSpan.textContent = 'And 38+ more...';
+                moreSpan.style.background = 'var(--primary)';
+                moreSpan.style.borderColor = 'var(--primary)';
+                container.appendChild(moreSpan);
+            })
+            .catch(error => {
+                console.error('Error fetching cities:', error);
+                container.innerHTML = '<span class="tag">Service available in 48+ cities</span>';
+            });
+    });
+</script>
+{% endblock %}
+{% endblock %}

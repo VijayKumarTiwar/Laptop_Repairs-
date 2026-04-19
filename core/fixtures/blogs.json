@@ -1,0 +1,38 @@
+[
+  {
+    "model": "core.blogpost",
+    "pk": 1,
+    "fields": {
+      "title": "5 Tips to Keep Your Laptop Running Fast",
+      "slug": "5-tips-keep-laptop-running-fast",
+      "updated_at": "2026-04-10",
+      "excerpt": "Is your laptop feeling sluggish? Here are 5 quick tips you can use to speed up your system instantly.",
+      "content": "<p style=\"margin-bottom: 1.5rem;\">A slow laptop can be incredibly frustrating. Whether you're working, gaming, or just browsing the web, delays and freezes ruin the experience. Over time, your system accumulates temporary files, unused applications, and fragmented data that collectively slow down performance.</p>\n<h3 style=\"color: var(--primary); margin-top: 2.5rem; margin-bottom: 1.5rem;\">Here are 5 expert tips to keep your system fast:</h3>\n<ul style=\"margin-left: 2rem; margin-bottom: 2.5rem;\">\n<li style=\"margin-bottom: 1rem;\"><strong>Clear your cache and temporary files:</strong> Regular maintenance is key. Use built-in disk cleanup tools to remove unnecessary files.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Uninstall unused applications:</strong> Applications you no longer use take up valuable storage space and may run background processes that consume RAM.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Upgrade your HDD to an SSD:</strong> This is the single most effective upgrade for any older laptop. SSDs load data up to 10x faster than traditional hard drives.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Add more RAM:</strong> If you multitask heavily, having at least 8GB or 16GB of RAM ensures smooth switching between applications.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Keep your Operating System updated:</strong> Security patches and OS updates often include critical performance optimizations.</li>\n</ul>\n<div style=\"background: rgba(0, 0, 128, 0.05); border-left: 4px solid var(--primary); padding: 1.5rem; margin-top: 2rem; border-radius: 8px;\">\n<h4 style=\"margin-bottom: 0.5rem;\">Need Professional Help?</h4>\n<p style=\"margin-bottom: 0;\">If you're unsure how to perform these upgrades, <strong>Tiwari's certified experts</strong> are just a click away to upgrade your system in 30 minutes at your doorstep!</p>\n</div>",
+      "image_url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=1200"
+    }
+  },
+  {
+    "model": "core.blogpost",
+    "pk": 2,
+    "fields": {
+      "title": "Why Professional MacBook Repair Matters",
+      "slug": "why-professional-macbook-repair-matters",
+      "updated_at": "2026-04-12",
+      "excerpt": "Don't let amateur hands ruin your expensive MacBook. Discover why you should always opt for certified repair experts.",
+      "content": "<p style=\"margin-bottom: 1.5rem;\">MacBooks are premium devices designed with precision engineering. Unlike many Windows laptops, their internal architecture is highly proprietary, featuring custom-designed logic boards, specialized screws, and closely integrated components.</p>\n<p style=\"margin-bottom: 1.5rem;\">Repairing a MacBook requires specialized tools and a deep understanding of macOS and Apple hardware. Using an unauthorized repair center can result in:</p>\n<ul style=\"margin-left: 2rem; margin-bottom: 2.5rem;\">\n<li style=\"margin-bottom: 1rem;\"><strong>Voided Warranty:</strong> Opening your MacBook without certification immediately voids any remaining Apple warranty.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Counterfeit Parts:</strong> Cheap, non-genuine parts can cause hardware conflicts, overheating, or battery swelling.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Data Loss:</strong> Improper handling of logic boards or SSDs can lead to irreversible data corruption.</li>\n</ul>\n<p style=\"margin-bottom: 1.5rem;\">At Tiwari, our trained technicians only use genuine parts and follow strict anti-static protocols to ensure your MacBook is repaired flawlessly. We understand the value of your device and guarantee an Apple-grade service experience right at your doorstep.</p>",
+      "image_url": "https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?auto=format&fit=crop&q=80&w=1200"
+    }
+  },
+  {
+    "model": "core.blogpost",
+    "pk": 3,
+    "fields": {
+      "title": "How to Protect Your PC from Malware",
+      "slug": "how-to-protect-pc-from-malware",
+      "updated_at": "2026-04-15",
+      "excerpt": "Cyber threats are on the rise. Learn the essential steps to protect your personal and business data from malicious software.",
+      "content": "<p style=\"margin-bottom: 1.5rem;\">Malware, ransomware, and phishing attacks are increasingly common. As our reliance on digital infrastructure grows, protecting your data has never been more important. A single click on a malicious link can compromise your entire system.</p>\n<h3 style=\"color: var(--primary); margin-top: 2.5rem; margin-bottom: 1.5rem;\">Essential Security Protocols:</h3>\n<ul style=\"margin-left: 2rem; margin-bottom: 2.5rem;\">\n<li style=\"margin-bottom: 1rem;\"><strong>Robust Antivirus:</strong> Ensure you have a premium, updated antivirus program installed and active at all times.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Email Vigilance:</strong> Never click on suspicious email links or download attachments from unknown senders. Phishing is the #1 method of malware delivery.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Data Backups:</strong> Regularly back up your important files to an external drive or secure cloud storage. If ransomware locks your PC, backups are your only safety net.</li>\n<li style=\"margin-bottom: 1rem;\"><strong>Two-Factor Authentication (2FA):</strong> Enable 2FA on all your critical accounts to prevent unauthorized access.</li>\n</ul>\n<p style=\"margin-bottom: 1.5rem;\">At Tiwari, we offer full-system health checks, deep-level malware removal, and security software installation at your doorstep to ensure your digital life remains secure. Book an expert today to audit your PC's security.</p>",
+      "image_url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
+    }
+  }
+]

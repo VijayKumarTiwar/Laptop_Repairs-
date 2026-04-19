@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" style="padding-top: 150px; padding-bottom: 50px;">
+    <div class="container text-center" style="max-width: 900px;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: 800;">{{ blog.title }}</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">Updated on {{ blog.updated_at }}</p>
+    </div>
+</section>
+
+<section class="container" style="margin-bottom: 5rem; max-width: 900px;">
+    {% if blog.image_url %}
+    <div style="margin-bottom: 4rem; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <img src="{{ blog.image_url }}" alt="{{ blog.title }}" style="width: 100%; height: auto; object-fit: cover; display: block; max-height: 500px;">
+    </div>
+    {% endif %}
+    
+    <div class="content-body" style="font-size: 1.25rem; line-height: 1.9; color: var(--text-dark);">
+        {% if blog.content %}
+            {{ blog.content|safe }}
+        {% else %}
+            {{ blog.excerpt }}
+        {% endif %}
+    </div>
+    
+    <div style="margin-top: 5rem; text-align: center; border-top: 1px solid var(--glass-border); padding-top: 3rem;">
+        <a href="{% url 'blog_index' %}" class="btn-primary" style="display: inline-block;">&larr; Back to Blogs</a>
+    </div>
+</section>
+{% endblock %}

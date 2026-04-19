@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" style="padding-top: 150px; padding-bottom: 50px;">
+    <div class="container">
+        <h1>
+            <span>About</span> Tiwari
+        </h1>
+        <p>India's most trusted Purely Bhartiya tech support platform.</p>
+    </div>
+</section>
+
+<section class="container" style="margin-top: 2rem; margin-bottom: 5rem;">
+    <div style="background: var(--bg-card); padding: 3rem; border-radius: 20px; border: 1px solid var(--glass-border);">
+        <h2 style="color: var(--primary); margin-bottom: 1rem;">Our Story</h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.8; opacity: 0.9;">
+            Tiwari was founded with a single mission: to revolutionize tech support across India. We saw the frustration people faced when dealing with slow, unreliable, and unprofessional repair services. We envisioned a platform where premium IT support is just a tap away—delivered directly to your doorstep within 30 minutes.
+        </p>
+        <p style="margin-bottom: 1.5rem; line-height: 1.8; opacity: 0.9;">
+            Today, Tiwari operates in over 48 cities, serving thousands of happy customers with a team of certified, background-verified professionals. We are proud to be a "Purely Bhartiya Brand" committed to quality, transparency, and speed.
+        </p>
+    </div>
+</section>
+
+<section id="why-choose" class="container" style="margin-bottom: 5rem;">
+    <div class="section-title">
+        <h2>Why Choose Us?</h2>
+        <p>Built on reliability, quality, and trust</p>
+    </div>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>Help at your doorstep within 30 minutes.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>100% Verified</h3>
+            <p>Rigorous background verification for all experts.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">💎</div>
+            <h3>Transparent Pricing</h3>
+            <p>No hidden charges. What you see is what you pay.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🌿</div>
+            <h3>Eco-Friendly</h3>
+            <p>Safe methods for your devices and family.</p>
+        </div>
+    </div>
+</section>
+
+<section id="impact" class="impact-section" style="padding: 4rem 0; background: var(--bg-card); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Impact</h2>
+        </div>
+        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
+            <div class="stat-item">
+                <div class="stat-num" style="font-size: 3rem; font-weight: 800; color: var(--primary);">10,000+</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num" style="font-size: 3rem; font-weight: 800; color: var(--primary);">48+</div>
+                <div class="stat-label">Cities Covered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num" style="font-size: 3rem; font-weight: 800; color: var(--primary);">5000+</div>
+                <div class="stat-label">Professionals</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

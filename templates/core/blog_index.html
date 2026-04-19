@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" style="padding-top: 150px; padding-bottom: 50px;">
+    <div class="container text-center">
+        <h1>Our Blog</h1>
+        <p>Insights, tips, and updates from the Tiwari team.</p>
+    </div>
+</section>
+
+<section class="container" style="margin-bottom: 5rem;">
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        {% for blog in blogs %}
+        <div class="card blog-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                {% if blog.image_url %}
+                <div style="height: 200px; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                    <img src="{{ blog.image_url }}" alt="{{ blog.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                {% endif %}
+                <div class="blog-date" style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 0.5rem;">Updated on {{ blog.updated_at }}</div>
+                <h3>{{ blog.title }}</h3>
+                <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem;">{{ blog.excerpt }}</p>
+            </div>
+            {% if blog.slug %}
+            <a href="{% url 'blog_detail' blog.slug %}" class="btn-read-more" style="margin-top: 1.5rem; color: var(--primary); font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Read More &rarr;</a>
+            {% endif %}
+        </div>
+        {% empty %}
+        <p style="text-align: center; width: 100%;">No blog posts found.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
