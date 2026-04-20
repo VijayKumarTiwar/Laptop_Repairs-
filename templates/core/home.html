@@ -108,68 +108,14 @@
             <p>Real experiences from real people</p>
         </div>
     </div>
-    <div class="marquee-wrapper">
+    <div id="testimonial-track-1" class="marquee-wrapper">
         <div class="marquee-track marquee-left">
-            <div class="card testimonial-card">
-                <p class="quote">"Absolutely love Tiwari! The engineer arrived within 8 minutes and did an amazing job.
-                    My laptop is rebooting fast!"</p>
-                <div class="user-info"><strong>Priya Sharma</strong><span>Delhi</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"Professional, punctual, and thorough. The verification process gives me peace of mind.
-                    Highly recommended!"</p>
-                <div class="user-info"><strong>Rajesh Kumar</strong><span>Mumbai</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"Game changer for working professionals. Book at late night if system crashing, no
-                    worries for morning meeting!"</p>
-                <div class="user-info"><strong>Anita Desai</strong><span>Bangalore</span></div>
-            </div>
-            <!-- Duplicated for infinite scroll -->
-            <div class="card testimonial-card">
-                <p class="quote">"Absolutely love Tiwari! The engineer arrived within 8 minutes and did an amazing job.
-                    My laptop is rebooting fast!"</p>
-                <div class="user-info"><strong>Priya Sharma</strong><span>Delhi</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"Professional, punctual, and thorough. The verification process gives me peace of mind.
-                    Highly recommended!"</p>
-                <div class="user-info"><strong>Rajesh Kumar</strong><span>Mumbai</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"Game changer for working professionals. Book at late night if system crashing, no
-                    worries for morning meeting!"</p>
-                <div class="user-info"><strong>Anita Desai</strong><span>Bangalore</span></div>
-            </div>
+            <!-- Testimonials will be loaded here -->
         </div>
     </div>
-    <div class="marquee-wrapper" style="margin-top: 2rem;">
+    <div id="testimonial-track-2" class="marquee-wrapper" style="margin-top: 2rem;">
         <div class="marquee-track marquee-right">
-            <div class="card testimonial-card">
-                <p class="quote">"Exceptional service. Highly recommend the experts for hardware upgrades."</p>
-                <div class="user-info"><strong>Suresh Iyer</strong><span>Chennai</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"The 30-minute guarantee is real! Saved my presentation when my screen died."</p>
-                <div class="user-info"><strong>Neha Gupta</strong><span>Pune</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"Transparent pricing, no hidden fees. Purely Bhartiya and purely awesome."</p>
-                <div class="user-info"><strong>Amit Patel</strong><span>Ahmedabad</span></div>
-            </div>
-            <!-- Duplicated for infinite scroll -->
-            <div class="card testimonial-card">
-                <p class="quote">"Exceptional service. Highly recommend the experts for hardware upgrades."</p>
-                <div class="user-info"><strong>Suresh Iyer</strong><span>Chennai</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"The 30-minute guarantee is real! Saved my presentation when my screen died."</p>
-                <div class="user-info"><strong>Neha Gupta</strong><span>Pune</span></div>
-            </div>
-            <div class="card testimonial-card">
-                <p class="quote">"Transparent pricing, no hidden fees. Purely Bhartiya and purely awesome."</p>
-                <div class="user-info"><strong>Amit Patel</strong><span>Ahmedabad</span></div>
-            </div>
+            <!-- Testimonials will be loaded here -->
         </div>
     </div>
 </section>
@@ -179,22 +125,8 @@
         <h2>Our Expert Services</h2>
         <p>Comprehensive solutions for all your tech needs.</p>
     </div>
-    <div class="grid">
-        <div class="card">
-            <div class="card-icon">💻</div>
-            <h3>MacBook Service</h3>
-            <p>Specialized repair and maintenance for all Apple MacBook models with genuine parts.</p>
-        </div>
-        <div class="card">
-            <div class="card-icon">🪟</div>
-            <h3>Windows Service</h3>
-            <p>Complete OS installation, troubleshooting, and hardware upgrades for Windows PCs.</p>
-        </div>
-        <div class="card">
-            <div class="card-icon">⚙️</div>
-            <h3>Gadget Installation</h3>
-            <p>Smart home setup, printer configuration, and device networking at your doorstep.</p>
-        </div>
+    <div id="services-container" class="grid">
+        <!-- Services will be loaded here -->
     </div>
     <div style="text-align: center; margin-top: 2rem;">
         <a href="{% url 'services' %}" class="btn-primary">View All Services</a>
@@ -353,46 +285,8 @@
     <div class="section-title">
         <h2>Got questions? We've got answers</h2>
     </div>
-    <div class="faq-accordion">
-        <div class="faq-item">
-            <div class="faq-header">
-                <h3>How quickly can I get service?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-content">
-                <p>Our professionals typically arrive within 30 minutes of booking, depending on your location and time
-                    of day.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-header">
-                <h3>Are the professionals background verified?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-content">
-                <p>Yes, every professional Engineer goes through rigorous background verification and police clearance
-                    before joining our team.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-header">
-                <h3>What if I'm not satisfied with the service?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-content">
-                <p>We offer a 100% satisfaction guarantee. If you're not happy, we'll send someone else or provide a
-                    full refund.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-header">
-                <h3>Do I need to provide Laptop Hardware? </h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-content">
-                <p>No, our professionals come fully equipped with all necessary Laptop materials and equipment.</p>
-            </div>
-        </div>
+    <div id="faq-container" class="faq-accordion">
+        <!-- FAQs will be loaded here -->
     </div>
 </section>
 
@@ -682,6 +576,90 @@
                 console.error('Error fetching cities:', error);
                 container.innerHTML = '<span class="tag">Service available in 48+ cities</span>';
             });
+
+        // Fetch Services
+        const servicesContainer = document.getElementById('services-container');
+        fetch('/api/services/')
+            .then(response => response.json())
+            .then(data => {
+                servicesContainer.innerHTML = '';
+                data.forEach(service => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <div class="card-icon">${service.icon}</div>
+                        <h3>${service.name}</h3>
+                        <p>${service.description}</p>
+                    `;
+                    servicesContainer.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching services:', error));
+
+        // Fetch Testimonials
+        const track1 = document.querySelector('#testimonial-track-1 .marquee-track');
+        const track2 = document.querySelector('#testimonial-track-2 .marquee-track');
+        fetch('/api/testimonials/')
+            .then(response => response.json())
+            .then(data => {
+                track1.innerHTML = '';
+                track2.innerHTML = '';
+                
+                // Split data between two tracks
+                const mid = Math.ceil(data.length / 2);
+                const firstHalf = data.slice(0, mid);
+                const secondHalf = data.slice(mid);
+
+                const createCard = (item) => {
+                    const card = document.createElement('div');
+                    card.className = 'card testimonial-card';
+                    card.innerHTML = `
+                        <p class="quote">"${item.content}"</p>
+                        <div class="user-info"><strong>${item.name}</strong><span>${item.location}</span></div>
+                    `;
+                    return card;
+                };
+
+                firstHalf.forEach(item => track1.appendChild(createCard(item)));
+                // Duplicate for infinite scroll
+                firstHalf.forEach(item => track1.appendChild(createCard(item)));
+
+                secondHalf.forEach(item => track2.appendChild(createCard(item)));
+                // Duplicate for infinite scroll
+                secondHalf.forEach(item => track2.appendChild(createCard(item)));
+            })
+            .catch(error => console.error('Error fetching testimonials:', error));
+
+        // Fetch FAQs
+        const faqContainer = document.getElementById('faq-container');
+        fetch('/api/faqs/')
+            .then(response => response.json())
+            .then(data => {
+                faqContainer.innerHTML = '';
+                data.forEach(faq => {
+                    const item = document.createElement('div');
+                    item.className = 'faq-item';
+                    item.innerHTML = `
+                        <div class="faq-header">
+                            <h3>${faq.question}</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            <p>${faq.answer}</p>
+                        </div>
+                    `;
+                    
+                    // Add click event for dynamic FAQ
+                    item.querySelector('.faq-header').addEventListener('click', () => {
+                        const isActive = item.classList.contains('active');
+                        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                        if (!isActive) item.classList.add('active');
+                    });
+                    
+                    faqContainer.appendChild(item);
+                });
+            })
+            .catch(error => console.error('Error fetching FAQs:', error));
 
         // Fetch Blogs
         const blogContainer = document.getElementById('blog-container');

@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.views import View
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import City, BlogPost
-from .serializers import CitySerializer, BlogPostSerializer
+from .models import City, BlogPost, Service, FAQ, Testimonial
+from .serializers import CitySerializer, BlogPostSerializer, ServiceSerializer, FAQSerializer, TestimonialSerializer
 
 class HomeView(View):
     def get(self, request):
@@ -58,6 +58,24 @@ class BlogDetailView(View):
     def get(self, request, slug):
         blog = get_object_or_404(BlogPost, slug=slug)
         return render(request, 'core/blog_detail.html', {'blog': blog})
+
+class ServiceListView(APIView):
+    def get(self, request):
+        services = Service.objects.filter(is_active=True)
+        serializer = ServiceSerializer(services, many=True)
+        return Response(serializer.data)
+
+class FAQListView(APIView):
+    def get(self, request):
+        faqs = FAQ.objects.filter(is_active=True)
+        serializer = FAQSerializer(faqs, many=True)
+        return Response(serializer.data)
+
+class TestimonialListView(APIView):
+    def get(self, request):
+        testimonials = Testimonial.objects.filter(is_active=True)
+        serializer = TestimonialSerializer(testimonials, many=True)
+        return Response(serializer.data)
 
 class CityListView(APIView):
     def get(self, request):
